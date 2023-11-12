@@ -1,0 +1,29 @@
+GET http://localhost:3000/book/1
+
+###
+GET http://localhost:3000/books
+
+###
+POST http://localhost:3000/book
+Content-Type: application/json
+
+{
+    "title": "tes",
+    "author": "akira toriyama",
+    "publisher": "v-jump",
+    "price": "09"
+}
+
+###
+PATCH http://localhost:3000/book/4
+Content-Type: application/json
+
+{
+    "title": "naruto shippuden uno",
+    "author": "masashi kishimoto",
+    "publisher": "v-jump",
+    "price": 17000
+}
+
+###
+DELETE http://localhost:3000/book/5
