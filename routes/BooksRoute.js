@@ -8,11 +8,12 @@ const {
 } = require("../controllers/BooksController");
 const { createValidation } = require("../validations/BooksValidation");
 const router = express.Router();
+const verifyToken = require("./../midlewares/verifyToken");
 
-router.get("/book/:id", showBook);
-router.get("/books", findBooks);
-router.post("/book", createValidation, createBook);
-router.patch("/book/:id", createValidation, updateBook);
-router.delete("/book/:id", deleteBook);
+router.get("/book/:id", verifyToken, showBook);
+router.get("/books", verifyToken, findBooks);
+router.post("/book", verifyToken, createValidation, createBook);
+router.patch("/book/:id", verifyToken, createValidation, updateBook);
+router.delete("/book/:id", verifyToken, deleteBook);
 
 module.exports = router;

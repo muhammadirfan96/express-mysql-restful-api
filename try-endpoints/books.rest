@@ -1,0 +1,36 @@
+POST http://localhost:3000/book
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk
+
+Content-Type: application/json
+
+{
+    "title": "nama baik anak",
+    "author": "sitti",
+    "publisher": "pt. kakaya",
+    "price": 42100
+}
+
+###
+GET http://localhost:3000/book/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk
+
+###
+GET http://localhost:3000/books?title=naruto
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk
+
+###
+PATCH http://localhost:3000/book/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk
+
+Content-Type: application/json
+
+{
+    "title": "nama baik anak",
+    "author": "jamila",
+    "publisher": "pt. kakaya",
+    "price": 42100
+}
+
+###
+DELETE  http://localhost:3000/book/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk

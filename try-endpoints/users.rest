@@ -1,0 +1,54 @@
+POST http://localhost:3000/user/register
+Content-Type: application/json
+
+{
+    "email": "muhammadirfan187@outlook.com",
+    "password": "123456",
+    "confPassword": "12345"
+}
+
+###
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email": "muhammadirfan187@outlook.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:3000/user/refresh-token
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk
+
+###
+DELETE http://localhost:3000/user/logout
+
+###
+POST http://localhost:3000/user/forgot-password
+Content-Type: application/json
+
+{
+    "email": "muhammadirfan187@outlook.com"
+}
+
+###
+PATCH http://localhost:3000/user/reset-password
+Content-Type: application/json
+
+{
+    "emailToken": 633743,
+    "newPassword": "123456",
+    "confPassword": "123456"
+}
+
+###
+GET http://localhost:3000/user/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzkyMDk4LCJleHAiOjE3MDE3OTIxMjh9.cNhAmMS7_9wKhKWFIT-T3SBoqSSKjsGdcOvKDpqZrq8
+
+###
+GET http://localhost:3000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk
+
+###
+DELETE  http://localhost:3000/user/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJtdWhhbW1hZGlyZmFuMTg3QG91dGxvb2suY29tIiwiaWF0IjoxNzAxNzg2MzUxLCJleHAiOjE3MDE3ODY0MTF9.qnNbLapEx0pvd2APU4LExvcl5iLQBIJLsNeLjDNz2bk

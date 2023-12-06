@@ -38,11 +38,16 @@ exports.findBooks = async (req, res) => {
     const page = parseInt(req.query.page ?? 1);
     const offset = limit * page - limit;
 
-    const response = await BooksModel.findAndCountAll({
+    const data = await BooksModel.findAndCountAll({
       where: where,
       limit: limit,
       offset: offset,
     });
+    const response = {
+      total: data.count,
+      page: page,
+      data: data.rows,
+    };
     return res.status(200).json(response);
   } catch (error) {
     console.error(error);
